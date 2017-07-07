@@ -7,7 +7,7 @@ describe('Definition') do
   end
 
   describe("#id")do
-    it("returns the id of the definition")do
+    xit("returns the id of the definition")do
       test_definition = Definition.new("the word actually means sweet potato in the swahili language")
       test_definition.save()
       expect(test_definition.id()).to(eq(1))
@@ -15,7 +15,7 @@ describe('Definition') do
   end
 
   describe(".find")do
-    it("returns a definition by its id number")do
+    xit("returns a definition by its id number")do
       test_definition = Definition.new("the word actually means sweet potato in the swahili language")
       test_definition.save()
       test_definition2 = Definition.new("the word actually means sweet potato in the swahili language")
@@ -25,7 +25,7 @@ describe('Definition') do
   end
 
   describe("#save") do
-    it("adds a definition to the array of saved definitions") do
+    xit("adds a definition to the array of saved definitions") do
       test_definition = Definition.new("the word actually means sweet potato in the swahili language")
       test_definition.save()
       expect(Definition.all()).to(eq([test_definition]))
@@ -33,7 +33,7 @@ describe('Definition') do
   end
 
   describe(".clear") do
-    it("empties out all of the saved definitions") do
+    xit("empties out all of the saved definitions") do
       Definition.new("the word actually means sweet potato in the swahili language").save()
       Definition.clear()
       expect(Definition.all()).to(eq([]))
