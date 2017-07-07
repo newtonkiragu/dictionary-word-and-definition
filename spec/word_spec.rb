@@ -1,6 +1,7 @@
 require('rspec')
 require('word')
 require('definition')
+require('pry')
 
 describe(Word) do
   before() do
@@ -56,6 +57,7 @@ describe(Word) do
       test_word.save()
       test_word2 = Word.new("Jane")
       test_word2.save()
+      binding.pry
       expect(Word.find(test_word.id())).to(eq(test_word))
     end
   end
