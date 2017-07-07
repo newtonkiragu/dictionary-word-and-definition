@@ -16,11 +16,27 @@
     <script src="scripts/scripts.js" charset="utf-8"></script>
 
     <!-- Compiled and minified CSS -->
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
 
   <!-- Compiled and minified JavaScript -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
   </head>
+  <header>
+  <nav class="nav-extended">
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo">Dictionary</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a>About</a></li>
+        <li><a href="/words">List of Words</a></li>
+      </ul>
+    </div>
+    <div class="nav-content">
+      <a class="btn-floating btn-large halfway-fab waves-effect waves-light teal" href="/words/new">
+        <i class="material-icons">+</i>
+      </a>
+    </div>
+  </nav>
+  </header>
   <body>
     <div class="container">
       <%= yield %>
