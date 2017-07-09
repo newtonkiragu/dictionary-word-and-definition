@@ -10,6 +10,10 @@ get('/') do
   erb(:index)
 end
 
+get('/about') do
+  erb(:about)
+end
+
 get('/words/new')do
   erb(:words_form)
 end
@@ -31,10 +35,6 @@ get('/path_to_definitions/:id') do
   erb(:words)
 end
 
-get('/def') do
-  erb(:definition)
-end
-
 get('/words/:id')do
   id = params.fetch('id').to_i
   @word = Word.find(id)
@@ -54,6 +54,5 @@ post('/definitions')do
   @definition.save()
   @word = Word.find(params.fetch('word_id').to_i())
   @word.add_definition(@definition)
-  binding.pry
   erb(:success)
 end

@@ -20,22 +20,31 @@
 
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+  <script src="scripts/main.js" charset="utf-8"></script>
   </head>
   <header>
-  <nav class="nav-extended">
-    <div class="nav-wrapper">
-      <a href="/" class="brand-logo">Dictionary</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="/about">About</a></li>
-        <li><a href="/words">List of Words</a></li>
-      </ul>
-    </div>
-    <div class="nav-content">
-      <a class="btn-floating btn-large halfway-fab waves-effect waves-light teal" href="/words/new">
-        <i class="material-icons">+</i>
-      </a>
-    </div>
-  </nav>
+
+    <nav>
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo">Dictionary</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="/about">About</a></li>
+          <li><a href="/words">List of Words</a></li>
+        </ul>
+        <div class="nav-content">
+          <a class="btn-floating btn-large halfway-fab waves-effect waves-light teal" href="/words/new">
+            <i class="material-icons">+</i>
+          </a>
+        </div>
+        <ul class="side-nav" id="mobile-demo">
+          <li><a href="/about">About</a></li>
+          <li><a href="/words">List of Words</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
   </header>
   <body>
     <div class="container">
