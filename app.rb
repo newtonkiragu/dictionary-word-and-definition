@@ -23,11 +23,11 @@ get('/words')do
   erb(:words)
 end
 
-post('/words')do
+post('/success-word')do
   name = params.fetch('name')
   Word.new(name).save()
   @words = Word.all()
-  erb(:success)
+  erb(:success_word)
 end
 
 get('/path_to_definitions/:id') do
@@ -38,7 +38,6 @@ end
 get('/words/:id')do
   id = params.fetch('id').to_i
   @word = Word.find(id)
-
   erb(:word)
 end
 
